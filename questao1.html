@@ -1,0 +1,194 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Projeto WEB - AV1</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <!-- CSS Topo e Rodapé -->
+    <link href="css/starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/cover.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- CSS Interno -->
+    <style>
+      td, th {
+        text-align: center;
+      }
+    </style>
+ <!-- Resolução questão 02 -->
+ 
+ <script type="text/javascript">
+    function media(){
+        var nomeAluno  = form_media.nomeAluno.value;
+        var nota1 = parseFloat(document.getElementById("nota1").value);
+        var nota2 = parseFloat(document.getElementById("nota2").value);
+        var soma = (nota1 + nota2)/2 ;
+        var disciplina = form_media.disciplina.value;
+        var media = soma ;
+        
+    if( media >= 7){
+        // document.write ("Aprovado");
+        var media = "Aprovado";
+    }
+     if( media <= 3) {
+        // document.write ("Reprovado");
+        var media = "Reprovado";
+    }  
+    if (( media >3 ) && ( media <7 )) {
+        // document.write ("Recuperação");
+        var media = "Recuperação";
+    }
+    
+    else{
+        // document.write("Nota Inválida!");
+        var media = "Número Inválido";
+    }
+    
+    // return ;
+      document.getElementById("resultado").innerHTML = 
+      "---------------------------------------------- <b>Analise da Situação</b> ----------------------------------------------"+
+      "<br><b>Aluno:</b> "+nomeAluno+
+      "<br><b>Disciplina:</b> "+disciplina+
+      "<br><b>Nota 1:</b>  "+nota1+
+      "<br><b>Nota 2:</b> " +nota2+
+     "<br><b>"+nomeAluno+", sua média é: "+media;
+      "<br>--------------------------------------------------------------------------------------------------------------------"
+    
+    }
+    
+</script>
+
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <!-- <a class="navbar-brand" href="index.html">Projeto WEB</a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Questões</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                  <a class="dropdown-item" href="questao1.html">Questão - 01</a>
+                  <a class="dropdown-item" href="questao2.html">Questão - 02</a>
+                  <a class="dropdown-item" href="questao3.html">Questão - 03</a>
+                  <a class="dropdown-item" href="questao4.html">Questão - 04</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </nav>
+    </header>
+    
+    <main role="main" class="container">
+
+      <div class="starter-template">
+        <h1>Questão - 03</h1>
+        <p class="lead text-center mt-5 mb-5">Software para Calcular a média e a situação de um aluno.
+      </div>
+      
+      <div class="row">
+        <div class="col-6">
+          <h5 style="text-align: center;">Média Aritmética</h5>
+          <table class="table table-sm">
+            
+            <tbody>
+              <tr>
+                <td>>=3</td>
+              </tr>
+              <tr>
+                <td> >3 e <7 </td>
+              </tr>
+              <tr>
+                <td>>=7</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="col-6">
+          <h5 style="text-align: center;">Mensagem</h5>
+          <table class="table table-sm">  
+            <tbody>
+              <tr>
+                <td>Reprovado</td>
+              </tr>
+              <tr>
+                <td>Recuperação</td>
+              </tr>
+              <tr>
+                <td>Aprovado</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <hr>
+
+      <div>
+        <form name="form_media" id="form_media" class="col-12" method="POST" action="">
+            <br class="form-group">
+              <label >Nome do Aluno</label>
+              <input type="text" class="form-control col-6" name="nomeAluno"  placeholder="Input exemplo"></br>
+              <div class="form-row">
+                <div class="form-group col-md-2 pr-5">
+                  <label for="nota1" >Nota 1</label>
+                  <input type="text" class="form-control" id="nota1"name="nota1" placeholder="Primeira nota...">
+                </div>
+                <div class="form-group col-md-2 pl-5">
+                  <label for="nota2">Nota 2</label>
+                  <input type="text" class="form-control" id="nota2" name="nota2" placeholder="Segunda nota...">
+                </div>
+              </div>    
+            </div>
+            <div class="form-group col-md-4">
+                <label  id="disciplina">Disciplina</label>
+                <select name="disciplina" id="disciplina" class="form-control">
+                  <option  selected disabled value="">...</option>
+                  <option value="Programacao Web">Programação Web</option>
+                  <option value="Banco de Dados">Banco de Dados</option>
+                  <option value="Redes de Computadores">Redes de Computadores</option>
+                </select>
+          </form>
+      </div></br>
+      <button onclick="media()" class="btn btn-outline-primary float-center" type="button">Calcular</button>
+
+      <br><br></br></br>
+      <p id="resultado"></p>
+
+    </main>
+    
+    <footer class="footer">
+      <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-12 text-center mb-5">
+                  <span class="text-muted">Site desenvolvido por Tiago <a  style="color:black"target="_blank" href="https://github.com/spaaws/atividadefinal">GitHub</a> </span>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

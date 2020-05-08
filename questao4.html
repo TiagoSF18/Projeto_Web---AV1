@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Projeto WEB - AV1</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+    <!-- CSS Topo e Rodapé -->
+    <link href="css/starter-template.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/cover.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- CSS Interno -->
+    <style>
+      td, th {
+        text-align: center;
+      }
+    </style>
+ 
+    <!-- Solução Questão - 03 -->
+    <script type="text/javascript">
+      function imc(){
+        var nome =  form_imc.nome.value;
+        var altura =  form_imc.altura.value;
+        var peso   =  form_imc.peso.value;
+        var imc = peso/(altura*altura);
+
+        // document.write(imc)
+        if(imc < 18.5){
+          (imc == nome+ "<p>você está abaixo do peso</p>") 
+        }
+        else if( imc > 18.5 && imc<25){
+          (imc == nome+ "<p> seu peso está  normal")
+        }
+        else if(imc >25 && imc < 30){
+          (imc == nome+"<p>você está acima do peso")
+        }
+        else if(imc>30){
+          (imc == nome+"<p> você está obeso")
+        }
+        // var novo_sal = "CARGO NÃO POSSUI REAJUSTE DE SALÁRIO";
+
+        //salario = parseFloat(salario);
+
+
+        // if (cargo == "Atendente") {
+        //   var aumento  = (parseFloat(salario) * 0.08);
+        //   var novo_sal  = (parseFloat(salario) + parseFloat(aumento));
+        //   var perc_aum = " (+ 8%)";
+        // }
+        // else if (cargo == "Estoquista") {
+        //   var aumento = (parseFloat(salario) * 0.06);
+        //   var novo_sal  = (parseFloat(salario) + parseFloat(aumento));
+        //   var perc_aum = " (+ 6%)";
+        // } 
+        // else if (cargo == "Gerente") {
+        //   var aumento = (parseFloat(salario) * 0.03);
+        //   var novo_sal  = (parseFloat(salario) + parseFloat(aumento));
+        //   var perc_aum = " (+ 3%)";
+        // }
+        // else {
+        //   var aumento = "CARGO SEM AUMENTO NO MOMENTO.";
+        // }
+
+
+        // if (novo_sal <= 1045) {
+        //   var inss  = (parseFloat(novo_sal) * 0.075);
+        //   var sal_liq = parseFloat(novo_sal) - parseFloat(inss);
+        //   var perc_inss = " (- 7,5%)";
+        // }
+        // else if ((novo_sal > 1045) && (novo_sal <= 2089.6)) {
+        //   var inss  = (parseFloat(novo_sal) * 0.09);
+        //   var sal_liq = parseFloat(novo_sal) - parseFloat(inss);
+        //   var perc_inss = " (- 9%)";
+        // }
+        // else if ((novo_sal > 2089.6) && (novo_sal <= 3134.4)) {
+        //   var inss  = (parseFloat(novo_sal) * 0.12);
+        //   var sal_liq = parseFloat(novo_sal) - parseFloat(inss);
+        //   var perc_inss = " (- 12%)";
+        // }
+        // else {
+        //   var inss  = (parseFloat(novo_sal) * 0.14);
+        //   var sal_liq = parseFloat(novo_sal) - parseFloat(inss);
+        //   var perc_inss = " (- 14%)";
+        // }
+
+        document.getElementById("demo").innerHTML = 
+        "---------------------------------------------- <b>Resultado imc</b> ----------------------------------------------"+
+        "<br><b>Paciente:</b> "+nome.toUpperCase()+
+        "<br><b>Altura:</b> "+altura.toUpperCase()+
+        "<br><b>Peso:</b> "+peso.toUpperCase()+
+        "<br><b>imc:</b> " +imc+
+        "<br>------------------------------------------------------------------------------------------------------------------"
+
+      }
+    </script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/cover.css"> -->
+
+  </head>
+
+  <body>
+    <header class="navbar navbar-masthead">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <!-- <a class="navbar-brand" href="#">Navbar fixo</a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <a id="a" class="nav-link active" href="index.html" >Home</a>
+            <!-- <a id="a" class="nav-link" href="#">Sobre</a> -->
+            <!-- <a id="a" class="nav-link" href="#">Contato</a> -->
+            <div class="dropdown">
+              <button class="btn btn-secondary" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Questões
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item" type="button"><a href="questao1.html">Questão 1</a></button>
+                <button class="dropdown-item" type="button"><a href="questao2.html">Questão 2</a></button>
+                <button class="dropdown-item" type="button"><a href="questao3.html">Questão 3</a></button>
+                <button class="dropdown-item" type="button"><a href="questao4.html">Questão 4</a></button>
+                
+              </div>
+            </div>
+          </div>
+        </nav>
+           
+      </header>
+    
+    <main role="main" class="container-fluid">
+
+      <div class="starter-template">
+        <h1>Questão - 03</h1>
+        <p class="lead text-center mt-5 mb-5">Software para calcular o IMC (Indice de Massa Corporal).  
+      </div>
+      
+      <!-------------  form -------------------------------------------------->
+      <form name="form_imc">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 ">    
+              <div class="form-group">
+                  <label>Paciente</label>
+                  <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome...">
+              </div>
+          </div>
+      </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 ">    
+                <div class="form-group">
+                    <label>Altura</label>
+                    <input type="text" class="form-control" id="altura" name="altura" placeholder="Digite sua altura...">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6 ">    
+                <div class="form-group">
+                    <label>Peso</label>
+                    <input type="text" class="form-control" id="peso" name="peso" placeholder="Digite seu peso...">
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center]">
+            <div class="col-lg-4">
+                <button onclick="imc()" class="btn btn-outline-primary float-right" type="button">Calcular</button>
+                
+            </div>
+        </div>
+    
+    </form> 
+  <br><br>
+  <p id="demo"></p>
+   
+
+      
+  <footer class="footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center mb-5">
+                <span class="text-muted">Site desenvolvido por Tiago <a  style="color:black"target="_blank" href="https://github.com/spaaws/atividadefinal">GitHub</a> </span>
+            </div>
+        </div>
+    </div>
+</footer>
+    </main>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

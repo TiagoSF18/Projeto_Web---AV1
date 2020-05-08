@@ -1,0 +1,12 @@
+.dropdown-item:hover{
+background-color:#DCDCDC;
+}
+.card {
+    background: transparent;
+    border: none;
+}
+.title-home{
+    margin-top:100px;
+    margin-bottom:40px;
+    text-align: center;
+}
